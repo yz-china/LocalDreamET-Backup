@@ -1,0 +1,1 @@
+{"text":"11-01 11:05:04 [ENGINE] QNN NPU not supported on this device; using CPU/GPU\n11-01 11:05:05 [ENGINE] Engine start: anythingv5cpu pid=196671019\n\n\n我用的CPU模型怎么会报这个设备不支持QNN NPU呢","model":"OnePlus PLR110","androidVer":"17","ts":1793502684}
