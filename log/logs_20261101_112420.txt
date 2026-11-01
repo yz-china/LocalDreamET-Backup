@@ -1,0 +1,458 @@
+=== LocalDream ET diagnostics ===
+generated_at: 2026-11-01 11:24:20
+device: OnePlus PLR110 (abi=arm64-v8a)
+
+---- In-app LogHub buffer ----
+10:59:38 [APP] openclProbe: GL_RENDERER=Adreno (TM) 829 vendor=Adreno openclPathsPresent=/vendor/lib/libOpenCL.so,/vendor/lib64/libOpenCL.so,/system/vendor/lib/libOpenCL.so,/system/vendor/lib64/libOpenCL.so
+10:59:38 [APP] App start; sd15LongEdge=768
+10:59:38 [APP] Public model scan: 0 custom/imported + 0 built-in ready
+10:59:46 [DOWNLOAD] Start download: 动漫 (upscaler_anime) from https://hf-mirror.com/xororz/upscaler/resolve/main/realesrgan_x4plus_anime_6b/upscaler_8gen2.bin
+11:00:23 [DOWNLOAD] Start download: 真实 (upscaler_realistic) from https://hf-mirror.com/xororz/upscaler/resolve/main/4x_UltraSharpV2_Lite/upscaler_8gen2.bin
+11:02:19 [APP] onTrimMemory level=20
+11:02:44 [APP] onTrimMemory level=20
+11:08:49 [UPLOAD] cloud login failed: user HTTP 401
+11:10:43 [UPLOAD] cloud login ok as yz-china
+11:10:52 [UPLOAD] cloud login failed: user HTTP 401
+11:11:27 [UPLOAD] OK GITHUB yz-china/LocalDreamET-Backup/feedback/feedback_0f28fa75_1793502684308.json (HTTP 201, path=feedback/feedback_0f28fa75_1793502684308.json)
+11:11:46 [APP] onTrimMemory level=20
+11:17:37 [APP] onTrimMemory level=20
+11:18:11 [APP] onTrimMemory level=20
+11:18:44 [APP] onTrimMemory level=20
+11:19:19 [APP] onTrimMemory level=20
+
+---- Public app.log ----
+== app.log (43 bytes) ==
+11-01 11:19:19 [APP] onTrimMemory level=20
+---- Engine logs ----
+== engine_anythingv5_20261101_104230.log (9605 bytes) ==
+== engine run: anythingv5 ==
+command: /data/app/~~wWrVY0H8Jp5-rgZ2J9ADRg==/etc.github.ai-njbbFTxUK0WCdw9TkiDX8A==/lib/arm64/libstable_diffusion_core.so --type sd15npu --model_dir /storage/emulated/0/LocalDreamET/models/anythingv5 --port 8081 --lib_dir /data/user/0/etc.github.ai/files/runtime_libs
+abi: [arm64-v8a]
+ld_library_path: /data/user/0/etc.github.ai/files/runtime_libs:/system/lib64:/vendor/lib64:/vendor/lib64/egl
+---- native output ----
+    92.9ms [  INFO ] Loaded pos_emb.bin: 59136 floats
+    94.7ms [  INFO ] Mapped token_emb.bin: 37945344 elements (FP16, mmap)
+    94.9ms [  INFO ] Embeddings directory not found: /storage/emulated/0/LocalDreamET/embeddings
+CPU Group: [ 0  1  2  3  4  5 ], 384000 - 3321600
+CPU Group: [ 6  7 ], 384000 - 3801600
+(last_midr & (CPUINFO_ARM_MIDR_IMPLEMENTER_MASK | CPUINFO_ARM_MIDR_PART_MASK))=0x 51000020 in _getInfoArm, 1250 
+The device supports: i8sdot:1, fp16:1, i8mm: 1, sve2: 1, sme2: 0, perfCores: 0
+   900.5ms [  INFO ] Persistent MNN CLIP session created.
+   913.4ms [  INFO ] Model wasn't loaded from a shared library.
+   913.5ms [  INFO ] Model wasn't loaded from a shared library.
+   913.5ms [  INFO ] Model wasn't loaded from a shared library.
+   913.5ms [  INFO ] Initializing QNN App from Cache: UNET
+   913.5ms [  INFO ] Initializing logging in the backend. Callback: [0x5b046523d0], Log Level: [3]
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create started.
+
+     0.0ms [WARNING] QnnDsp <W> Initializing HtpProvider
+
+     0.0ms [  INFO ] QnnDsp <I> exit with 0
+
+     0.0ms [  INFO ] QnnDsp <I> exit with 0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create exit.
+
+     0.0ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create started. backend = 0x18ae5fa0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create done successfully. backend = 0x18ae5fa0
+
+     0.0ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+   917.4ms [  INFO ] Initialize Backend Returned Status = 0
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create started
+
+     0.0ms [  INFO ] QnnDsp <I> No scheduler was created for deviceId=0 coreId=0 pdId=0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create done. device = 0x1. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary started. backend = 0x1, device = 0x1
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel: not supported for DeviceId 0 coreId 0 pdId 0
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel not supported on this platform
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 1, graphs: 1
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary done successfully. context = 0x1
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve started. context = 0x1
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 1, graphs: 1
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId started for deviceId: 0, coreId: 0
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679848
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679848
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679848
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679848
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+  3992.1ms [  INFO ] QNN App Initialized from Cache: UNET
+  3992.1ms [  INFO ] Initializing QNN App from Cache: VAEDecoder
+  3992.1ms [  INFO ] Initializing logging in the backend. Callback: [0x5b046523d0], Log Level: [3]
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create started.
+
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create exit.
+
+  3074.7ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create started. backend = 0x18ae6da0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create done successfully. backend = 0x18ae6da0
+
+  3074.8ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+  3992.2ms [  INFO ] Initialize Backend Returned Status = 0
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create started
+
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create done. device = 0x2. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary started. backend = 0x2, device = 0x2
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel: not supported for DeviceId 0 coreId 0 pdId 0
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel not supported on this platform
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 2, graphs: 2
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary done successfully. context = 0x2
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve started. context = 0x2
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 2, graphs: 2
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId started for deviceId: 0, coreId: 0
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679847
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679847
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679847
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679847
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+  4719.5ms [  INFO ] QNN App Initialized from Cache: VAEDecoder
+  4719.5ms [  INFO ] Initializing QNN App from Cache: VAEEncoder
+  4719.5ms [  INFO ] Initializing logging in the backend. Callback: [0x5b046523d0], Log Level: [3]
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create started.
+
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create exit.
+
+  3802.2ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create started. backend = 0x18f53ba0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create done successfully. backend = 0x18f53ba0
+
+  3802.3ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+  4719.6ms [  INFO ] Initialize Backend Returned Status = 0
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create started
+
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create done. device = 0x3. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary started. backend = 0x3, device = 0x3
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel: not supported for DeviceId 0 coreId 0 pdId 0
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel not supported on this platform
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 3, graphs: 3
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary done successfully. context = 0x3
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve started. context = 0x3
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 3, graphs: 3
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId started for deviceId: 0, coreId: 0
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679846
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679846
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679846
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: -402679846
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+  5214.2ms [  INFO ] QNN App Initialized from Cache: VAEEncoder
+Server listening on 127.0.0.1:8081
+== engine_anythingv5_20261101_104217.log (9605 bytes) ==
+== engine run: anythingv5 ==
+command: /data/app/~~wWrVY0H8Jp5-rgZ2J9ADRg==/etc.github.ai-njbbFTxUK0WCdw9TkiDX8A==/lib/arm64/libstable_diffusion_core.so --type sd15npu --model_dir /storage/emulated/0/LocalDreamET/models/anythingv5 --port 8081 --lib_dir /data/user/0/etc.github.ai/files/runtime_libs
+abi: [arm64-v8a]
+ld_library_path: /data/user/0/etc.github.ai/files/runtime_libs:/system/lib64:/vendor/lib64:/vendor/lib64/egl
+---- native output ----
+    97.2ms [  INFO ] Loaded pos_emb.bin: 59136 floats
+    98.4ms [  INFO ] Mapped token_emb.bin: 37945344 elements (FP16, mmap)
+    98.6ms [  INFO ] Embeddings directory not found: /storage/emulated/0/LocalDreamET/embeddings
+CPU Group: [ 0  1  2  3  4  5 ], 384000 - 3321600
+CPU Group: [ 6  7 ], 384000 - 3801600
+(last_midr & (CPUINFO_ARM_MIDR_IMPLEMENTER_MASK | CPUINFO_ARM_MIDR_PART_MASK))=0x 51000020 in _getInfoArm, 1250 
+The device supports: i8sdot:1, fp16:1, i8mm: 1, sve2: 1, sme2: 0, perfCores: 0
+   438.1ms [  INFO ] Persistent MNN CLIP session created.
+   450.8ms [  INFO ] Model wasn't loaded from a shared library.
+   450.9ms [  INFO ] Model wasn't loaded from a shared library.
+   450.9ms [  INFO ] Model wasn't loaded from a shared library.
+   450.9ms [  INFO ] Initializing QNN App from Cache: UNET
+   450.9ms [  INFO ] Initializing logging in the backend. Callback: [0x5cd24c63d0], Log Level: [3]
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create started.
+
+     0.0ms [WARNING] QnnDsp <W> Initializing HtpProvider
+
+     0.0ms [  INFO ] QnnDsp <I> exit with 0
+
+     0.0ms [  INFO ] QnnDsp <I> exit with 0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create exit.
+
+     0.0ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create started. backend = 0xaace5fa0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create done successfully. backend = 0xaace5fa0
+
+     0.0ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+   458.4ms [  INFO ] Initialize Backend Returned Status = 0
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create started
+
+     0.0ms [  INFO ] QnnDsp <I> No scheduler was created for deviceId=0 coreId=0 pdId=0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create done. device = 0x1. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary started. backend = 0x1, device = 0x1
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel: not supported for DeviceId 0 coreId 0 pdId 0
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel not supported on this platform
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 1, graphs: 1
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary done successfully. context = 0x1
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve started. context = 0x1
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 1, graphs: 1
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId started for deviceId: 0, coreId: 0
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554328
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554328
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554328
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554328
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+  1455.4ms [  INFO ] QNN App Initialized from Cache: UNET
+  1455.4ms [  INFO ] Initializing QNN App from Cache: VAEDecoder
+  1455.4ms [  INFO ] Initializing logging in the backend. Callback: [0x5cd24c63d0], Log Level: [3]
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create started.
+
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create exit.
+
+   997.0ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create started. backend = 0xaace6da0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create done successfully. backend = 0xaace6da0
+
+   997.1ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+  1455.4ms [  INFO ] Initialize Backend Returned Status = 0
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create started
+
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create done. device = 0x2. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary started. backend = 0x2, device = 0x2
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel: not supported for DeviceId 0 coreId 0 pdId 0
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel not supported on this platform
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 2, graphs: 2
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary done successfully. context = 0x2
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve started. context = 0x2
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 2, graphs: 2
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId started for deviceId: 0, coreId: 0
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554329
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554329
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554329
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554329
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+  1760.1ms [  INFO ] QNN App Initialized from Cache: VAEDecoder
+  1760.1ms [  INFO ] Initializing QNN App from Cache: VAEEncoder
+  1760.1ms [  INFO ] Initializing logging in the backend. Callback: [0x5cd24c63d0], Log Level: [3]
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create started.
+
+     0.0ms [  INFO ] QnnDsp <I> QnnLog_create exit.
+
+  1301.7ms [  INFO ] Creating backend with QnnGraphTransformerAdapter
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create started. backend = 0xab153ba0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnBackend_create done successfully. backend = 0xab153ba0
+
+  1301.7ms [  INFO ] QnnGraphTransformer createBackend done, status = 0x0
+  1760.1ms [  INFO ] Initialize Backend Returned Status = 0
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create started
+
+     0.0ms [  INFO ] QnnDsp <I> QnnDevice_create done. device = 0x3. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary started. backend = 0x3, device = 0x3
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> m_CFBCallbackInfoObj is not initialized, return emptyList
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel: not supported for DeviceId 0 coreId 0 pdId 0
+
+     0.0ms [WARNING] QnnDsp <W> setInferenceBufferForHtpExtensionSkel not supported on this platform
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 3, graphs: 3
+
+     0.0ms [  INFO ] QnnDsp <I> QnnContext_createFromBinary done successfully. context = 0x3
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve started. context = 0x3
+
+     0.0ms [  INFO ] QnnDsp <I> Number of existing contexts: 3, graphs: 3
+
+     0.0ms [  INFO ] QnnDsp <I> QnnGraph_retrieve done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId started for deviceId: 0, coreId: 0
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureCreatePowerConfigId done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554330
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554330
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554330
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig started for powerConfigId: 2042554330
+
+
+     0.0ms [  INFO ] QnnDsp <I> htpPerfInfrastructureSetPowerConfig done. status 0x0
+
+  1888.8ms [  INFO ] QNN App Initialized from Cache: VAEEncoder
+Server listening on 127.0.0.1:8081
+---- Convert logs ----
+(none)
